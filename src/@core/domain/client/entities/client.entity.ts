@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/clients/sequelize/clients.model'

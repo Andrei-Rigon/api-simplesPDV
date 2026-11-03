@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/users/sequelize/users.model'

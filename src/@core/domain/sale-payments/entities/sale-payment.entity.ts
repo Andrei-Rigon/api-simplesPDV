@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/payment-sale/sequelize/sale_payment.model'

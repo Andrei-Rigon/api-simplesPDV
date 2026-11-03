@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/itens-sale/sequelize/itens-sale.model'

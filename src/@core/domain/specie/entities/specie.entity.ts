@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/species/sequelize/species.model'

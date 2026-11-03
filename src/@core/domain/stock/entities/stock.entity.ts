@@ -1,0 +1,1 @@
+export * from '../../../infraestructure/stock/sequelize/stock.model'
