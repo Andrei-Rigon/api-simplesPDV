@@ -8,11 +8,10 @@ import { AuthModule } from './@core/domain/auth/module/auth.module';
 import { UsersModule } from './@core/domain/users/module/users.module';
 import { StockModule } from './@core/domain/stock/module/stock.module';
 import { SalesModule } from './@core/domain/sales/module/sales.module';
-import { SpecieModule } from './@core/domain/specie/modules/specie.module';
 import { ItensSaleModule } from './@core/domain/itens-sale/module/itens-sale.module';
 import { SalePaymentsModule } from './@core/domain/sale-payments/module/sale-payments.module';
-import { SpecieControllerTsController } from './@core/domain/specie/specie.controller.ts/specie.controller.ts.controller';
-import { SpecieModule } from './@core/domain/specie/specie.module';
+import { SpecieModule } from './@core/domain/specie/module/specie.module';
+
 
 
 @Module({
@@ -44,7 +43,7 @@ import { SpecieModule } from './@core/domain/specie/specie.module';
     ItensSaleModule,
     SalePaymentsModule
   ],
-  controllers: [AppController, SpecieControllerTsController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}

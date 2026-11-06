@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { SpecieService } from './specie.service';
-import { CreateSpecieDto } from './dto/create-specie.dto';
-import { UpdateSpecieDto } from './dto/update-specie.dto';
+import { SpecieService } from '../services/specie.service';
+import { CreateSpecieDto } from '../dto/create-specie.dto';
+import { UpdateSpecieDto } from '../dto/update-specie.dto';
 
 @Controller('specie')
 export class SpecieController {

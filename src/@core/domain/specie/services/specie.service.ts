@@ -1,26 +1,46 @@
-import { Injectable } from '@nestjs/common';
-import { CreateSpecieDto } from './dto/create-specie.dto';
-import { UpdateSpecieDto } from './dto/update-specie.dto';
+import { Inject, Injectable } from '@nestjs/common';
+import { CreateSpecieDto } from '../dto/create-specie.dto';
+import { UpdateSpecieDto } from '../dto/update-specie.dto';
+import type { SpecieRepositoryInterface } from '../respositories/specie.repositories';
+
 
 @Injectable()
 export class SpecieService {
+
+  constructor(
+    @Inject('SPECIES_REPOSITORY')
+    private readonly specieRepository: SpecieRepositoryInterface
+  ) {}
+
   create(createSpecieDto: CreateSpecieDto) {
-    return 'This action adds a new specie';
+    return this.specieRepository.create(createSpecieDto);
   }
 
   findAll() {
-    return `This action returns all specie`;
+    return this.specieRepository.findAll();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} specie`;
+    return this.specieRepository.findOne({
+      where: {
+        id
+      }
+    })
   }
 
   update(id: number, updateSpecieDto: UpdateSpecieDto) {
-    return `This action updates a #${id} specie`;
+    return this.specieRepository.update(updateSpecieDto, {
+      where: {
+        id
+      }
+    })
   }
 
   remove(id: number) {
-    return `This action removes a #${id} specie`;
+    return this.specieRepository.destroy({
+      where: {
+        id
+      }
+    })
   }
 }
