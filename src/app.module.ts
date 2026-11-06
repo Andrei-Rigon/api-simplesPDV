@@ -11,6 +11,8 @@ import { SalesModule } from './@core/domain/sales/module/sales.module';
 import { SpecieModule } from './@core/domain/specie/modules/specie.module';
 import { ItensSaleModule } from './@core/domain/itens-sale/module/itens-sale.module';
 import { SalePaymentsModule } from './@core/domain/sale-payments/module/sale-payments.module';
+import { SpecieControllerTsController } from './@core/domain/specie/specie.controller.ts/specie.controller.ts.controller';
+import { SpecieModule } from './@core/domain/specie/specie.module';
 
 
 @Module({
@@ -42,7 +44,7 @@ import { SalePaymentsModule } from './@core/domain/sale-payments/module/sale-pay
     ItensSaleModule,
     SalePaymentsModule
   ],
-  controllers: [AppController],
+  controllers: [AppController, SpecieControllerTsController],
   providers: [AppService],
 })
 export class AppModule {}
